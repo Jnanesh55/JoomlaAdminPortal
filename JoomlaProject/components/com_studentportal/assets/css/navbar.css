@@ -1,0 +1,97 @@
+.back{
+  width: 100%;
+  background-color:#2e3b4e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  z-index: 99999;
+
+}
+
+#profile-container {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  display: flex;
+  gap: 25px;
+  z-index: 9999;
+}
+.sidebar img{
+  width: 70px;
+  height: 70px;
+  margin-right: 130px;
+  margin-top: -12px;
+}
+
+.profile-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid #26d4de;
+  cursor: pointer;
+  }
+  .notification img{
+  margin-top: 2px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.mode img{
+  margin-top: 2px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  border: 2px solid #26d4de;
+  border-radius: 6px;
+  width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.profile-dropdown a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.profile-dropdown a:hover {
+  background: #f7f9f2;
+}
+.search {
+  margin-right: 100px;
+}
+
+.search input[type="text"] {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  outline: none;
+  width: 600px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search input[type="text"]:focus {
+  border-color: #26d4de;
+  box-shadow: 0 0 8px rgba(0,123,255,0.2);
+}
+.head {
+  margin-right: 300px;
+}
+.head h1{
+color: #26d4de;
+font-size: 30px;
+margin-top: 10px;
+}
+
+

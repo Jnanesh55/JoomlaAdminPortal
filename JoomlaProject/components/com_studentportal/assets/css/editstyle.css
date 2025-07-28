@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcyan;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 700px;
+    background-color: white;
+    padding: 30px;
+    margin: auto;
+    border-radius: 7px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+h2 {
+    color: purple;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+button {
+    margin-top: 25px;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+.checkbox-group {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.checkbox-option input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+    margin-top: 0;
+}
+
+.checkbox-option label {
+    font-weight: normal;
+    margin-top: 0;
+    display: inline;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#fnameError,
+#lnameError,
+#emailError,
+#mobileError {
+    color: red;
+        
+
+}

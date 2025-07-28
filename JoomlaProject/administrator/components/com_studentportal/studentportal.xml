@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+    <name>studentportal</name>
+    <author>jnanesh</author>
+    <creationDate>July 2025</creationDate>
+    <version>1.0.0</version>
+    <description>Student Registration Portal Component</description>
+
+    <files>
+        <filename>studentportal.php</filename>
+        <filename>controller.php</filename>
+        <folder>assets</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>tables</folder>
+    </files>
+
+    <administration>
+        <menu>Student Portal</menu>
+
+        <install>
+            <sql>
+                <file driver="mysql" charset="utf8">install.mysql.utf8.sql</file>
+            </sql>
+        </install>
+
+        <files>
+            <filename>studentportal.php</filename>
+            <filename>controller.php</filename>
+            <folder>assets</folder>
+            <folder>models</folder>
+            <folder>views</folder>
+            <folder>tables</folder>
+        </files>
+    </administration>
+</install>

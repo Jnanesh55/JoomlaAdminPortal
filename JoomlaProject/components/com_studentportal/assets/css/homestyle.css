@@ -1,0 +1,169 @@
+ h2{
+    font-weight: bold;
+} 
+/* .welcome-container{
+  top: 20px;
+  display: flex;
+  z-index: 9999;
+ 
+} */
+h1{
+
+    font-weight: bold;
+
+} 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: beige;
+}
+
+.top-right-btn {
+    position: absolute;
+    top: 180px;
+    right: 40px;
+     background-color: skyblue;
+    padding: 2px;
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+.top-right-btn:hover{
+background-color: rgb(87, 114, 237);
+}
+/* img {
+    height: 60px;
+    width: 60px;
+} */
+
+.data {
+    max-width: 1200px;
+    margin: 30px auto;
+    margin-left: 40px;
+    margin-right: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gainsboro;
+}
+
+.heading {
+    color: darkgreen;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #bde0fe;
+}
+
+.view-btn {
+    background-color: skyblue;
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.view-btn:hover {
+    background-color: blue;
+}
+
+#btn1 {
+    background-color: skyblue;
+    border: none;
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#btn2 {
+    background-color: rgb(123, 236, 181);
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn2:hover {
+    background-color: rgb(6, 140, 46);
+}
+
+#btn3 {
+    background-color: rgb(240, 106, 106);
+    border: none;
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn3:hover {
+    background-color: rgb(225, 15, 15);
+}
+
+#btn4 {
+    background-color: skyblue;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 2px;
+    border: none;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+
+#btn4:hover {
+    background-color: rgb(87, 114, 237);
+}
+
+
+#link {
+    background-color: skyblue;
+            position: absolute;
+            top: 180px;
+            right: 190px;
+            padding: 10px;
+            border: none;
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10; 
+}
+
+#link:hover {
+    background-color: rgb(18, 49, 189);
+}
+
+
+#fnameError,
+#lnameError,
+#emailError,
+#mobileError {
+    color: red;
+}
