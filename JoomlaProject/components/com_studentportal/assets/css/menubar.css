@@ -49,6 +49,8 @@
   text-decoration: none;
   display: block;
   font-weight: bold;
+  font-size: 14px;
+  font-style: italic;
 }
 
 .sidebar-menu li a:hover {

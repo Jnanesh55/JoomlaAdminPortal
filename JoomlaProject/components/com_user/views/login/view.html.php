@@ -109,7 +109,7 @@ class UserViewLogin extends JView
 
 		$this->assignRef('params', $params);
 
-
+        $document->addStyleSheet(JURI::root() . 'components/com_studentportal/assets/css/login.css');
 		parent::display($tpl);
 	}
 }

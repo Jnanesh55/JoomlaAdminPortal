@@ -17,6 +17,23 @@
 </body>
 
 </html>
+<?php
+// Convert object list to array of state names
+$stateNames = array();
+foreach ($this->statedata as $obj) {
+    if (isset($obj->state)) {
+        $stateNames[] = $obj->state;
+    }
+}
+
+// Now count occurrences
+$stateCount = array_count_values($stateNames);
+$karnatakaCount = isset($stateCount['Karnataka']) ? $stateCount['Karnataka'] : 0;
+$MaharastraCount = isset($stateCount['Maharastra']) ? $stateCount['Maharastra'] :0;
+$KeralaCount = isset($stateCount['kerala']) ? $stateCount['kerala'] :0;
+$TamilCount = isset($stateCount['Tamilnadu']) ? $stateCount['Tamilnadu'] :0;
+$TelanganaCount = isset($stateCount['Telangana']) ? $stateCount['Telangana'] :0;
+?>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -70,7 +87,7 @@
           items: {
             KA: {
               tooltip: {
-                text: 'Karnataka has 2,851 monthly users total',
+                text: "Karnataka: <?php echo $karnatakaCount; ?> students",
                 backgroundColor: '#ff5722'
               },
               backgroundColor: '#ff5722',
@@ -80,7 +97,7 @@
             },
             MH: {
               tooltip: {
-                text: 'Maharashtra has 2,683 monthly users total',
+                text: "Maharastra: <?php echo $MaharastraCount; ?> students",
                 backgroundColor: '#ff9800'
               },
               backgroundColor: '#ff9800',
@@ -90,7 +107,7 @@
             },
             TL: {
               tooltip: {
-                text: 'Telangana has 1,494 monthly users total',
+                text: "Telangana: <?php echo $TelanganaCount; ?> students",
                 backgroundColor: '#00AE4D'
               },
               backgroundColor: '#00AE4D',
@@ -100,7 +117,7 @@
             },
             KL: {
               tooltip: {
-                text: 'Kerala has 245 monthly users total',
+                text: "Kerala: <?php echo $KeralaCount; ?> students",
                 backgroundColor: '#ff9800'
               },
               backgroundColor: '#ff9800',
@@ -110,7 +127,7 @@
             },
             TN: {
               tooltip: {
-                text: 'Tamil Nadu has 1,968 monthly users total',
+                text: "Tamilnadu: <?php echo $TamilCount; ?> students",
                 backgroundColor: '#00bcd4'
               },
               backgroundColor: '#00bcd4',

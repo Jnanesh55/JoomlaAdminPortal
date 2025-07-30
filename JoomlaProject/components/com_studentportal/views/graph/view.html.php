@@ -11,8 +11,8 @@ class StudentPortalViewGraph extends JView
         JHTML::stylesheet('graphstyle.css', 'components/com_studentportal/assets/css/');
           //JModel::addIncludePath(JPATH_COMPONENT.DS.'models');
     $model = JModel::getInstance('Student', 'StudentPortalModel');
-       $numbers = $model->getNumberOfStudents();
-       $this->assignRef('numberdata', $numbers);
+       $numbers = $model->getState();
+       $this->assignRef('statedata', $numbers);
         parent::display($tpl);
     }
 }

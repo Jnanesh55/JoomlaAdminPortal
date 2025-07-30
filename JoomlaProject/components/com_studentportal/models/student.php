@@ -10,37 +10,48 @@ class StudentPortalModelStudent extends JModel
     {
         $db = JFactory::getDBO();
         $query = "SELECT CONCAT(firstname, ' ', lastname) AS name, tenthh,twelveth FROM #__students";
-        $db->setQuery($query); 
+        $db->setQuery($query);
         return $db->loadObjectList();
     }
 
-    function getYear(){
+    function getYear()
+    {
         $db = JFactory::getDBO();
         $query = "SELECT year FROM #__students";
         $db->setQuery($query);
         return $db->loadObjectList();
     }
 
-    function getBranch(){
+    function getBranch()
+    {
         $db = JFactory::getDBO();
         $query = "SELECT branch FROM #__students";
         $db->setQuery($query);
         return $db->loadObjectList();
     }
 
-    function getSk(){
+    function getSk()
+    {
         $db = JFactory::getDBO();
         $query = "SELECT skills,interests FROM #__students";
-        $db->setQuery($query);  
+        $db->setQuery($query);
         return $db->loadObjectList();
     }
 
-    function getTable(){
-    $db = JFactory::getDBO();
-    $query = "SELECT CONCAT(firstname, ' ', lastname) AS name, email, gender, mobile, state, tenthh, twelveth FROM #__students";
-    $db->setQuery($query);
-    return $db->loadObjectList();
-}
+    function getTable()
+    {
+        $db = JFactory::getDBO();
+        $query = "SELECT CONCAT(firstname, ' ', lastname) AS name, email, gender, mobile, state, tenthh, twelveth FROM #__students";
+        $db->setQuery($query);
+        return $db->loadObjectList();
+    }
+    function getState()
+    {
+        $db = JFactory::getDBO();
+        $query = "SELECT state FROM #__students";
+        $db->setQuery($query);
+        return $db->loadObjectList();
+    }
 
     function store()
     {
@@ -57,7 +68,7 @@ class StudentPortalModelStudent extends JModel
         }
 
         // No need for field name conversion - use exact names from form
-        $row->state = isset( $postData['state'] ) ? $postData['state'] :'';
+        $row->state = isset($postData['state']) ? $postData['state'] : '';
         $row->tenthh = isset($postData['tenthh']) ? $postData['tenthh'] : '';
         $row->twelveth = isset($postData['twelveth']) ? $postData['twelveth'] : '';
 

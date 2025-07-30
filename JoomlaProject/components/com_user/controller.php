@@ -119,50 +119,46 @@ class UserController extends JController
 	}
 
 	function login()
-	{
-		// Check for request forgeries
-		JRequest::checkToken('request') or jexit( 'Invalid Token' );
+{
+    // Check for request forgeries
+    JRequest::checkToken('request') or jexit('Invalid Token');
 
-		global $mainframe;
+    global $mainframe;
 
-		if ($return = JRequest::getVar('return', '', 'method', 'base64')) {
-			$return = base64_decode($return);
-			if (!JURI::isInternal($return)) {
-				$return = '';
-			}
-		}
+    // Decode return URL (if any)
+    if ($return = JRequest::getVar('return', '', 'method', 'base64')) {
+        $return = base64_decode($return);
+        if (!JURI::isInternal($return)) {
+            $return = '';
+        }
+    }
 
-		$options = array();
-		$options['remember'] = JRequest::getBool('remember', false);
-		$options['return'] = $return;
+    // Get credentials
+    $credentials = array();
+    $credentials['username'] = JRequest::getVar('username', '', 'method', 'username');
+    $credentials['password'] = JRequest::getString('passwd', '', 'post', JREQUEST_ALLOWRAW);
 
-		$credentials = array();
-		$credentials['username'] = JRequest::getVar('username', '', 'method', 'username');
-		$credentials['password'] = JRequest::getString('passwd', '', 'post', JREQUEST_ALLOWRAW);
+    $options = array();
+    $options['remember'] = JRequest::getBool('remember', false);
+    $options['return'] = $return;
 
-		//preform the login action
-		$error = $mainframe->login($credentials, $options);
+    // Perform login
+    $error = $mainframe->login($credentials, $options);
 
-		if(!JError::isError($error))
-		{
-			// Redirect if the return url is not registration or login
-			if ( ! $return ) {
-				$return	= 'index.php?option=com_user';
-			}
+    if (JError::isError($error)) {
+         echo "<script>
+            alert('Invalid username or password!');
+            window.location.href = 'index.php?option=com_user&view=login';
+        </script>";
+        jexit();
+    } else {
+        if (!$return) {
+            $return = 'index.php?option=com_studentportal&view=home';
+        }
+        $mainframe->redirect(JRoute::_($return, false));
+    }
+}
 
-			$mainframe->redirect( $return );
-		}
-		else
-		{
-			// Facilitate third party login forms
-			if ( ! $return ) {
-				$return	= 'index.php?option=com_user&view=login';
-			}
-
-			// Redirect to a login form
-			$mainframe->redirect( $return );
-		}
-	}
 
 	function logout()
 	{
@@ -285,7 +281,8 @@ class UserController extends JController
 			$message = JText::_( 'REG_COMPLETE' );
 		}
 
-		$this->setRedirect('index.php', $message);
+		$this->setRedirect('index.php?option=com_user&view=login', $message);
+
 	}
 
 	function activate()

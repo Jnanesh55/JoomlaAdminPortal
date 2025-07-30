@@ -1,6 +1,17 @@
-body{
+/* body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+   
+}
+  
+.container{
+position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2a45;
+  color:white;
+  padding-top: 20px;
 }
 h1{
     color:#021010;
@@ -14,6 +25,8 @@ h1{
     border-radius: 20px;
     box-shadow:0 8px 30px rgba(67, 66, 66, 0.1);
    transition: transform 0.3s ease;
+   z-index: 1;
+   margin-top: 100px;
     
 }
 .login-container:hover{
@@ -60,8 +73,8 @@ h1{
     border-radius: 5px;
     cursor: pointer;
     float: right;
-    margin-right: 250px;
-    margin-top: 30px;
+    margin-right: 420px;
+    margin-top: 130px;
 
     z-index: 1;
   
@@ -69,4 +82,105 @@ h1{
  #see:hover{
     background-color:#26d4de;
     transform: translate(-2px);
+} */
+
+
+
+/* Global Reset & Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2b2a45;
+    margin: 0;
+    padding: 0;
+}
+.container{
+position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: #2b2a45;
+  color:white;
+  padding-top: 20px;
+}
+/* Centered container for form */
+#com-form-login {
+    max-width: 400px;
+    background-color: #fbfdff;
+    padding: 40px 50px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(67, 66, 66, 0.1);
+    transition: transform 0.3s ease;
+    color: black;
+}
+
+#com-form-login:hover {
+    transform: scale(1.02);
+}
+
+/* Label styles */
+#com-form-login label {
+    font-weight: bold;
+    font-size: 13px;
+    color: rgb(20, 20, 92);
+}
+
+/* Input fields */
+#com-form-login input[type="text"],
+#com-form-login input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bff0f3;
+    border-radius: 5px;
+    margin: 5px 0 15px;
+    box-sizing: border-box;
+}
+
+/* Remember me checkbox */
+#com-form-login input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Submit button */
+#com-form-login input[type="submit"] {
+
+    border: none;
+    height: 45px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+#com-form-login input[type="submit"]:hover {
+    background-color: #26d4de;
+    transform: translateY(-2px);
+}
+
+/* Forgot links and register */
+#com-form-login ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+#com-form-login ul li {
+    margin: 8px 0;
+}
+
+#com-form-login ul li a {
+    color: #2b2a45;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#com-form-login ul li a:hover {
+    color: #26d4de;
+    text-decoration: underline;
 }

@@ -24,7 +24,7 @@ if (in_array($view, array('home', 'edit', 'form', 'list', 'calender', 'about', '
         </ul>
       </li> -->
       <li><a href="index.php?option=com_studentportal&view=graph">🌍 Map</a></li>
-      <li><a href="index.php?option=com_studentportal&view=login">🚪 Logout</a></li>
+      <li><a href="index.php?option=com_user&view=login">🚪 Logout</a></li>
       <li><a href="index.php?option=com_studentportal&view=about">ℹ️ About Us</a></li>
     </ul>
   </div>

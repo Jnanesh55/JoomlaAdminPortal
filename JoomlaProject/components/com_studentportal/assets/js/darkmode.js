@@ -1,7 +1,6 @@
 (function () {
   const style = document.createElement('style');
   style.innerHTML = `
-    /* Body default */
     body {
       background-color: white;
       color: black;
@@ -13,66 +12,67 @@
       color: #e0e0e0 !important;
     }
 
-    /* Headings */
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, 
-    body.dark-mode h4, body.dark-mode h5 {
-      color: #060404ff !important;
+    body.dark-mode h1, 
+    body.dark-mode h2, 
+    body.dark-mode h3, 
+    body.dark-mode h4, 
+    body.dark-mode h5 {
+      color: #ffffff !important;
     }
 
-    /* DataTables search box and inputs */
     body.dark-mode input,
     body.dark-mode textarea,
     body.dark-mode select {
-      background-color: #555353ff !important;
+      background-color: #333 !important;
       color: #fff !important;
-      border: 1px solid #555 !important;
+      border: 1px solid #666 !important;
     }
 
-    /* Table styling */
     body.dark-mode table,
     body.dark-mode .dataTables_wrapper {
-      background-color: #575555ff !important;
+      background-color: #333 !important;
       color: #eee !important;
     }
 
     body.dark-mode table td,
     body.dark-mode table th {
-      background-color: #646161ff !important;
+      background-color: #444 !important;
       color: #fff !important;
     }
 
-    // /* Buttons */
-    // body.dark-mode .btn,
-    // body.dark-mode button,
-    // body.dark-mode input[type="button"],
-    // body.dark-mode input[type="submit"] {
-    //   background-color: #333 !important;
-    //   color: #fff !important;
-    //   border: 1px solid #888;
-    // }
-
-
-  body.dark-mode .sidebar,
-body.dark-mode #profile-container,
-body.dark-mode .custom-sidebar {
-  background-color: #5f5c5cff !important;
-  color: #2196f3 !important; /* Blue text color */
-}
-
-
-    /* Profile dropdown */
-    body.dark-mode .profile-dropdown {
-      background-color: #1e1e1e !important;
-      color: #fff;
+    body.dark-mode .sidebar,
+    body.dark-mode #profile-container,
+    body.dark-mode .custom-sidebar {
+      background-color: #2a2a2a !important;
+      color: #e0e0e0 !important;
     }
 
-    /* Links */
+    body.dark-mode .profile-dropdown {
+      background-color: #1e1e1e !important;
+      color: #fff !important;
+    }
+
     body.dark-mode a {
-      color: #90caf9;
+      color: #90caf9 !important;
     }
 
     body.dark-mode a:hover {
       text-decoration: underline;
+    }
+
+    body.dark-mode .uk-button,
+    body.dark-mode .uk-card,
+    body.dark-mode .uk-modal-dialog {
+      background-color: #2e2e2e !important;
+      color: white !important;
+    }
+
+    body.dark-mode .uk-input,
+    body.dark-mode .uk-select,
+    body.dark-mode .uk-textarea {
+      background-color: #2b2b2b !important;
+      color: #fff !important;
+      border-color: #666 !important;
     }
   `;
   document.head.appendChild(style);
@@ -85,7 +85,7 @@ function toggleDarkMode() {
   localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
 }
 
-// Apply saved mode
+// Apply saved mode on load
 (function () {
   const savedMode = localStorage.getItem('darkMode');
   if (savedMode === 'enabled') {

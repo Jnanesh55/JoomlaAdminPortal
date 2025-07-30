@@ -15,7 +15,14 @@
                 <input type="text" id="lastName" name="lastname" required>
                 <div id="lnameError" class="error"></div>
             </div>
-            
+            <div class="form-group">
+                <label for="userName" class="form-label">User Name <span class="required">*</span></label>
+                <input type="text" id="userName" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Password <span class="required">*</span></label>
+                <input type="text" id="password" name="password" required>
+            </div>
             <div class="form-group">
                 <label for="email" class="form-label">Email<span class="required">*</span></label>
                 <input type="text" id="email" name="email" required>

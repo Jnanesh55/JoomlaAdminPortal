@@ -1,10 +1,11 @@
 <?php
  define("_JEXEC","Access dnied");
 
-//include_once(JPATH_COMPONENT . DS . 'includes' . DS . 'profilebar.php');
-
 ?>
+<button onclick="downloadbmspdf()">Download BMS PDF</button>
 
-    <img src="<?php echo $base; ?>components/com_studentportal/assets/img/welcome.png" alt="Profile" />
-
-    <link rel="stylesheet" href="<?php echo $base; ?>components/com_studentportal/assets/css/frontpage.css"/>
+<script>
+  window.downloadbmspdf = function(){
+    window.open('index.php?option=com_studentportal&task=downloadbms')
+  }
+</script>

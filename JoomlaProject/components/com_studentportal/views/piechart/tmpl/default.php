@@ -8,11 +8,39 @@ defined('_JEXEC') or die('Restricted access'); ?>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script src="https://code.highcharts.com/themes/adaptive.js"></script>
-<h1>DashBoard</h1><br>
-<figure class="highcharts-figure">
-    <div id="container-speed" class="chart-container"></div>
-    <div id="container-rpm" class="chart-container"></div>
-</figure><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.23.11/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.23.11/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.23.11/dist/js/uikit-icons.min.js"></script>
+
+<div class="heading">
+    <h3>DashBoard</h3>
+</div><br>
+<div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <img src="components/com_studentportal/assets/img/active-user_9572776.png" alt="user" class="img-class"/>
+            <div class="head-class"><h4>Registered Users </h4><p>100+</p></div>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <img src="components/com_studentportal/assets/img/database.png" alt="user" class="img-class"/>
+            <div class="head-class"><h4>Total Space</h4><p>50/64GB</p></div></div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body"> 
+            <img src="components/com_studentportal/assets/img/project-management.png" alt="user" class="img-class"/>
+            <div class="head-class"><h4>Issues Solved</h4><p>10+</p></div></div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body"> 
+            <img src="components/com_studentportal/assets/img/download.png" alt="user" class="img-class"/>
+            <div class="head-class"><h4> Total Downloads</h4><p>1K+</p></div></div>
+    </div>
+</div><br><br><br>
 
 <!-- <p class="highcharts-description">
     <strong>The Admin Portal</strong> serves as a centralized dashboard for managing all student-related activities within the system. 
@@ -26,9 +54,13 @@ defined('_JEXEC') or die('Restricted access'); ?>
     <div id="chart1" class="chart-box"></div>
     <div id="chart2" class="chart-box"></div>
 </div>
-<div id="number3" style="height: 400px; margin-top: 40px;"></div>
-<h1 style="text-align: center;">Some data of Students</h1>
+<div id="number3" style="height: 400px; margin-top: 40px;"></div><br>
+<div class="table"><h1 style="text-align: center;">Some data of Students</h1></div>
 <div id="table"></div><br><br>
+<figure class="highcharts-figure">
+    <div id="container-speed" class="chart-container"></div>
+    <div id="container-rpm" class="chart-container"></div>
+</figure><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 

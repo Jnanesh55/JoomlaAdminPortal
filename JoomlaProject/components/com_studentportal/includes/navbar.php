@@ -39,10 +39,10 @@ if (in_array($view, array('home','edit','form','graph','piechart','about','calen
   </div>
 
   <div id="profile-menu" class="profile-dropdown">
-    <a href="#">Change Photo</a>
+    <a href="index.php?option=com_studentportal&view=changephoto">Change Photo</a>
     <!-- <a href="#" onclick="toggleDarkMode()">Change Mode</a> -->
     <a href="#">Settings</a>
-    <a href="index.php?option=com_studentportal&view=login">Logout</a>
+    <a href="index.php?option=com_user&view=login">Logout</a>
   </div>
 </div>
 
@@ -51,6 +51,13 @@ if (in_array($view, array('home','edit','form','graph','piechart','about','calen
 <link rel="stylesheet" href="<?php echo $base; ?>components/com_studentportal/assets/css/navbar.css" />
 <script src="<?php echo $base; ?>components/com_studentportal/assets/js/navbar.js"></script>
 <script src="<?php echo $base; ?>components/com_studentportal/assets/js/darkmode.js"></script>
+
+<!-- CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/css/uikit.min.css" /> -->
+
+<!-- JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit-icons.min.js"></script> -->
 
 <?php
 } // END if view is one of frontpage, login, signup, home

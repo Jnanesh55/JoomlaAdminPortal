@@ -1,4 +1,4 @@
-    <a href="index.php?option=com_studentportal&view=login"><button id="log">Login</button></a>
+   <!-- <div class="container"><a href="index.php?option=com_studentportal&view=login"><button id="log">Login</button></a>
 <div class="sign-container">
 <form action="index.php?option=com_studentportal&task=signup_submit" method="post" onsubmit="return validateSignupForm();" enctype="multipart/form-data">
      <h1>Sign Up</h1>
@@ -18,7 +18,7 @@
     <input type="submit" value="Submit">
 </form>
 </div>
-
+</div> 
 <script>
     function validateSignupForm() {
         var pass = document.getElementById('password').value;
@@ -30,5 +30,6 @@
         }
         return true;
     }
-</script>
+</script> -->
 
+<a href="index.php?option=com_user&view=register"></a>

@@ -7,8 +7,6 @@ class StudentPortalViewFrontpage extends JView{
 
     function display($tpl = null){
 
-        // $document = JFactory::getDocument();
-        // $document->addStyleSheet(JURI::root().'components/com_studentportal/assets/css/frontpage.css');
         parent::display($tpl);
     }
 }
